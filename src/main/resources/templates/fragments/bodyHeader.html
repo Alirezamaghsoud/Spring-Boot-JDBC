@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/navigation.css">
+</head>
+<div class="header" th:fragment="bodyHeader">
+    <nav class="navMenu">
+        <a  th:onclick="|location.href='@{/}'|">Home</a>
+        <a  th:onclick="|location.href='@{/item/form}'|">Create_Item</a>
+        <a  th:onclick="|location.href='@{/item/category/Balenciaga}'|">Balenciaga</a>
+        <a  th:onclick="|location.href='@{/item/category/DIOR}'|">DIOR</a>
+        <a  th:onclick="|location.href='@{/item/category/STONE_ISLAND}'|">STONE_ISLAND</a>
+    </nav>
+</div>

@@ -1,0 +1,119 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #272727;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navMenu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+
+.navMenu a {
+    color: #f6f4e6;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+    color: #fddb3a;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f4e6;
+    padding: 10px;
+    border-radius: 4px;
+    width: 400px;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+label {
+    color: #f6f4e6;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: solid 1px gray;
+    background-color: #f6f4e6;
+    color: #272727;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+input[type="text"]::placeholder,
+select::placeholder {
+    color: #9e9e9e;
+}
+
+p {
+    color: #fddb3a;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fddb3a;
+    color: #272727;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background-color: #f6c10f;
+}
+
+.fieldError {
+    border: 1px solid #fddb3a;
+}
+
+.fieldError::placeholder {
+    color: #fddb3a;
+}

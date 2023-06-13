@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ITEM</title>
+    <link rel="stylesheet" href="/form.css">
+</head>
+
+<body>
+<div th:replace="fragments/bodyHeader :: bodyHeader"></div>
+<div class="form-container">
+    <form role="form" action="/item/form" th:object="${item}" method="post">
+        <div class="form-group">
+            <label th:for="name">Name</label>
+            <input type="text" th:field="*{name}" class="form-control" placeholder="Type Item Name"
+                   th:class="${#fields.hasErrors('name')}? 'form-control fieldError' : 'form-control'">
+            <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+        </div>
+
+        <div class="form-group">
+            <label th:for="brand">Brand</label>
+            <select th:field="*{brand}" class="form-control"
+                    th:class="${#fields.hasErrors('brand')}? 'form-control fieldError' : 'form-control'">
+                <option value="">Select Brand</option>
+                <option th:each="br : ${brands}" th:value="${br}" th:text="${br}"></option>
+            </select>
+            <p th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}"></p>
+        </div>
+
+        <div class="form-group">
+            <label th:for="price">Price</label>
+            <input type="text" th:field="*{price}" class="form-control" placeholder="Type the price"
+                   th:class="${#fields.hasErrors('price')}? 'form-control fieldError' : 'form-control'">
+            <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></p>
+        </div>
+
+        <div class="form-group">
+            <label th:for="yearOfCreation">Year of Creation</label>
+            <input type="text" th:field="*{yearOfCreation}" class="form-control" placeholder="Type the year of creation"
+                   th:class="${#fields.hasErrors('yearOfCreation')}? 'form-control fieldError' : 'form-control'">
+            <p th:if="${#fields.hasErrors('yearOfCreation')}" th:errors="*{yearOfCreation}"></p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>
